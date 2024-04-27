@@ -6,6 +6,7 @@ After=network.target
 [Service]
 Type=simple
 User=root
+Environment="PYTHONPATH=/var/www/html/core"
 WorkingDirectory=/var/www/html/core
 ExecStart=/usr/bin/python3.10 /var/www/html/core/async_post_to_chats.py
 RestartSec=10
